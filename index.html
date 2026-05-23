@@ -22,21 +22,27 @@
         <img src="assets/logo-icon.png?v=3" alt="ATB Agency logo" class="logo-icon" width="72" height="72">
         <div class="logo-copy">
           <span class="logo-name">ATB Agency</span>
-          <span class="logo-tagline">Integration • Innovation • Growth</span>
+          <span class="logo-tagline" data-i18n="logo.tagline">Integration • Innovation • Growth</span>
         </div>
       </a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <div class="nav-overlay" id="navOverlay"></div>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#contact" class="btn btn-sm">Get in Touch</a></li>
-      </ul>
+      <div class="nav-right">
+        <div class="lang-switch" id="langSwitch">
+          <button type="button" class="lang-btn" data-lang="uz" aria-label="O'zbek tili">UZ</button>
+          <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <div class="nav-overlay" id="navOverlay"></div>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#services" data-i18n="nav.services">Services</a></li>
+          <li><a href="#about" data-i18n="nav.about">About</a></li>
+          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+          <li><a href="#contact" class="btn btn-sm" data-i18n="nav.cta">Get in Touch</a></li>
+        </ul>
+      </div>
     </nav>
   </header>
 
@@ -44,32 +50,32 @@
     <section class="hero">
       <div class="hero-bg"></div>
       <div class="container hero-content">
-        <div class="hero-badge">AI & Digital Agency</div>
-        <h1>
+        <div class="hero-badge" data-i18n="hero.badge">AI & Digital Agency</div>
+        <h1 data-i18n-html="hero.title">
           Take your business into a <span class="gradient-text">digital</span> future
         </h1>
-        <p class="hero-desc">
+        <p class="hero-desc" data-i18n="hero.desc">
           ATB Agency is a professional team that strengthens your business online through 
           Telegram bots, modern websites, and Google Maps Local SEO.
         </p>
         <div class="hero-actions">
-          <a href="#services" class="btn btn-primary">Our Services</a>
-          <a href="https://t.me/atbagencybot" target="_blank" rel="noopener" class="btn btn-outline">
+          <a href="#services" class="btn btn-primary" data-i18n="hero.btnServices">Our Services</a>
+          <a href="https://t.me/atbagencybot" target="_blank" rel="noopener" class="btn btn-outline" data-i18n="hero.btnTelegram">
             Telegram Bot
           </a>
         </div>
         <div class="hero-stats">
           <div class="stat">
             <span class="stat-num">3+</span>
-            <span class="stat-label">Core services</span>
+            <span class="stat-label" data-i18n="hero.stat1">Core services</span>
           </div>
           <div class="stat">
             <span class="stat-num">AI</span>
-            <span class="stat-label">Technologies</span>
+            <span class="stat-label" data-i18n="hero.stat2">Technologies</span>
           </div>
           <div class="stat">
             <span class="stat-num">24/7</span>
-            <span class="stat-label">Online support</span>
+            <span class="stat-label" data-i18n="hero.stat3">Online support</span>
           </div>
         </div>
       </div>
@@ -78,9 +84,9 @@
     <section class="services" id="services">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Our Services</span>
-          <h2>What we offer</h2>
-          <p>Complete digital solutions for your business — simple, fast, and effective.</p>
+          <span class="section-tag" data-i18n="services.tag">Our Services</span>
+          <h2 data-i18n="services.title">What we offer</h2>
+          <p data-i18n="services.desc">Complete digital solutions for your business — simple, fast, and effective.</p>
         </div>
         <div class="services-grid">
           <article class="service-card">
@@ -90,35 +96,35 @@
                 <path d="M8 10h8M8 14h5"/>
               </svg>
             </div>
-            <h3>Telegram Bot Development</h3>
-            <p>
+            <h3 data-i18n="services.s1Title">Telegram Bot Development</h3>
+            <p data-i18n="services.s1Desc">
               AI-powered Telegram bots that automate customer communication, accept orders, 
               and help grow your sales.
             </p>
             <ul class="service-features">
-              <li>24/7 automated replies</li>
-              <li>Order and payment system</li>
-              <li>AI chatbot integration</li>
+              <li data-i18n="services.s1f1">24/7 automated replies</li>
+              <li data-i18n="services.s1f2">Order and payment system</li>
+              <li data-i18n="services.s1f3">AI chatbot integration</li>
             </ul>
           </article>
 
           <article class="service-card featured">
-            <div class="featured-badge">Most requested</div>
+            <div class="featured-badge" data-i18n="services.s2Badge">Most requested</div>
             <div class="service-icon">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <rect x="2" y="3" width="20" height="14" rx="2"/>
                 <path d="M8 21h8M12 17v4"/>
               </svg>
             </div>
-            <h3>Website Development</h3>
-            <p>
+            <h3 data-i18n="services.s2Title">Website Development</h3>
+            <p data-i18n="services.s2Desc">
               Modern, fast, and mobile-friendly websites. Present your brand 
               professionally online.
             </p>
             <ul class="service-features">
-              <li>Responsive design</li>
-              <li>SEO optimization</li>
-              <li>Ready in 3–5 days</li>
+              <li data-i18n="services.s2f1">Responsive design</li>
+              <li data-i18n="services.s2f2">SEO optimization</li>
+              <li data-i18n="services.s2f3">Ready in 3–5 days</li>
             </ul>
           </article>
 
@@ -129,15 +135,15 @@
                 <circle cx="12" cy="10" r="3"/>
               </svg>
             </div>
-            <h3>Google Maps & Local SEO</h3>
-            <p>
+            <h3 data-i18n="services.s3Title">Google Maps & Local SEO</h3>
+            <p data-i18n="services.s3Desc">
               Rank first in local searches. Optimize your Google Maps profile 
               and increase customer flow.
             </p>
             <ul class="service-features">
-              <li>Google Business profile</li>
-              <li>Local SEO strategy</li>
-              <li>Review and rating management</li>
+              <li data-i18n="services.s3f1">Google Business profile</li>
+              <li data-i18n="services.s3f2">Local SEO strategy</li>
+              <li data-i18n="services.s3f3">Review and rating management</li>
             </ul>
           </article>
         </div>
@@ -149,37 +155,37 @@
         <div class="about-visual">
           <div class="about-card">
             <div class="about-card-inner">
-              <span class="about-label">CEO & Founder</span>
+              <span class="about-label" data-i18n="about.label">CEO & Founder</span>
               <h3>Ataboyev Mirjalol</h3>
-              <p>Founder of ATB Agency</p>
+              <p data-i18n="about.role">Founder of ATB Agency</p>
             </div>
             <div class="about-glow"></div>
           </div>
         </div>
         <div class="about-content">
-          <span class="section-tag">About Us</span>
-          <h2>ATB Agency — your trusted digital partner</h2>
-          <p>
+          <span class="section-tag" data-i18n="about.tag">About Us</span>
+          <h2 data-i18n="about.title">ATB Agency — your trusted digital partner</h2>
+          <p data-i18n="about.p1">
             We are a modern agency based in Urgench, Uzbekistan. Using artificial intelligence 
             and digital technologies, we help small and medium businesses build a strong 
             online presence.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             Individual approach for every project, clear deadlines, and professional results — 
             that is our core principle.
           </p>
           <div class="about-highlights">
             <div class="highlight">
-              <strong>📍 Location</strong>
-              <span>Urgench, Uzbekistan</span>
+              <strong data-i18n="about.locLabel">📍 Location</strong>
+              <span data-i18n="about.loc">Urgench, Uzbekistan</span>
             </div>
             <div class="highlight">
-              <strong>🎯 Mission</strong>
-              <span>Digitize your business</span>
+              <strong data-i18n="about.missionLabel">🎯 Mission</strong>
+              <span data-i18n="about.mission">Digitize your business</span>
             </div>
             <div class="highlight">
-              <strong>⚡ Speed</strong>
-              <span>Results in a short time</span>
+              <strong data-i18n="about.speedLabel">⚡ Speed</strong>
+              <span data-i18n="about.speed">Results in a short time</span>
             </div>
           </div>
         </div>
@@ -188,9 +194,9 @@
 
     <section class="cta">
       <div class="container cta-box">
-        <h2>Start your project today</h2>
-        <p>Get a free consultation and choose the best solution for your business.</p>
-        <a href="https://t.me/atbagencybot" target="_blank" rel="noopener" class="btn btn-primary btn-lg">
+        <h2 data-i18n="cta.title">Start your project today</h2>
+        <p data-i18n="cta.desc">Get a free consultation and choose the best solution for your business.</p>
+        <a href="https://t.me/atbagencybot" target="_blank" rel="noopener" class="btn btn-primary btn-lg" data-i18n="cta.btn">
           Message us on Telegram
         </a>
       </div>
@@ -199,9 +205,9 @@
     <section class="contact" id="contact">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag">Contact</span>
-          <h2>Get in touch</h2>
-          <p>Have questions? We are always ready to help.</p>
+          <span class="section-tag" data-i18n="contact.tag">Contact</span>
+          <h2 data-i18n="contact.title">Get in touch</h2>
+          <p data-i18n="contact.desc">Have questions? We are always ready to help.</p>
         </div>
         <div class="contact-grid">
           <a href="mailto:ataboevmirjalol3@gmail.com" class="contact-card">
@@ -211,7 +217,7 @@
                 <polyline points="22,6 12,13 2,6"/>
               </svg>
             </div>
-            <h3>Email</h3>
+            <h3 data-i18n="contact.email">Email</h3>
             <p>ataboevmirjalol3@gmail.com</p>
           </a>
 
@@ -221,7 +227,7 @@
                 <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
               </svg>
             </div>
-            <h3>Telegram Bot</h3>
+            <h3 data-i18n="contact.telegram">Telegram Bot</h3>
             <p>@atbagencybot</p>
           </a>
 
@@ -232,8 +238,8 @@
                 <circle cx="12" cy="10" r="3"/>
               </svg>
             </div>
-            <h3>Address</h3>
-            <p>Urgench, Uzbekistan</p>
+            <h3 data-i18n="contact.address">Address</h3>
+            <p data-i18n="contact.location">Urgench, Uzbekistan</p>
           </div>
         </div>
       </div>
@@ -247,21 +253,22 @@
           <img src="assets/logo-icon.png?v=3" alt="ATB Agency logo" class="logo-icon" width="56" height="56">
           <div class="logo-copy">
             <span class="logo-name">ATB Agency</span>
-            <span class="logo-tagline">Integration • Innovation • Growth</span>
+            <span class="logo-tagline" data-i18n="logo.tagline">Integration • Innovation • Growth</span>
           </div>
         </a>
-        <p>AI and digital solutions agency</p>
+        <p data-i18n="footer.tagline">AI and digital solutions agency</p>
       </div>
       <div class="footer-links">
-        <a href="#services">Services</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="https://t.me/atbagencybot" target="_blank" rel="noopener">Telegram</a>
+        <a href="#services" data-i18n="footer.services">Services</a>
+        <a href="#about" data-i18n="footer.about">About</a>
+        <a href="#contact" data-i18n="footer.contact">Contact</a>
+        <a href="https://t.me/atbagencybot" target="_blank" rel="noopener" data-i18n="footer.telegram">Telegram</a>
       </div>
-      <p class="footer-copy">&copy; 2026 ATB Agency. All rights reserved.</p>
+      <p class="footer-copy" data-i18n="footer.copy">&copy; 2026 ATB Agency. All rights reserved.</p>
     </div>
   </footer>
 
+  <script src="i18n.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

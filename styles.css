@@ -77,6 +77,49 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  background: var(--black-card);
+  border: 1px solid var(--border);
+  border-radius: 100px;
+}
+
+.lang-btn {
+  min-width: 40px;
+  min-height: 32px;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 100px;
+  background: transparent;
+  color: var(--gray);
+  font-family: inherit;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: var(--transition);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lang-btn:hover {
+  color: var(--white);
+}
+
+.lang-btn.active {
+  background: var(--blue);
+  color: white;
 }
 
 .logo {
@@ -726,6 +769,17 @@ a.contact-card:hover {
 @media (max-width: 768px) {
   .container {
     padding: 0 20px;
+  }
+
+  .nav-right {
+    gap: 8px;
+  }
+
+  .lang-btn {
+    min-width: 36px;
+    min-height: 30px;
+    padding: 5px 10px;
+    font-size: 0.75rem;
   }
 
   .header {

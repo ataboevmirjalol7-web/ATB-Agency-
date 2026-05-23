@@ -9,7 +9,7 @@ function setMenuOpen(isOpen) {
   navOverlay.classList.toggle('active', isOpen);
   document.body.classList.toggle('menu-open', isOpen);
   navToggle.setAttribute('aria-expanded', String(isOpen));
-  navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
+  navToggle.setAttribute('aria-label', getMenuLabel(isOpen));
 }
 
 window.addEventListener('scroll', () => {
@@ -51,3 +51,6 @@ document.querySelectorAll('.service-card, .about-grid, .contact-card, .section-h
   el.classList.add('fade-in');
   observer.observe(el);
 });
+
+initLanguage();
+navToggle.setAttribute('aria-label', getMenuLabel(false));
