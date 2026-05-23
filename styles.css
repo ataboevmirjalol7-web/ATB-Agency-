@@ -76,22 +76,19 @@ ul {
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-weight: 700;
-  font-size: 1.25rem;
+  flex-shrink: 0;
 }
 
-.logo-mark {
-  background: var(--blue);
-  color: white;
-  padding: 4px 10px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  letter-spacing: 0.5px;
+.logo-img {
+  height: 46px;
+  width: auto;
+  display: block;
+  border-radius: 10px;
+  object-fit: contain;
 }
 
-.logo-text {
-  color: var(--white);
+.logo-footer .logo-img {
+  height: 40px;
 }
 
 .nav-links {
@@ -638,6 +635,10 @@ a.contact-card:hover {
 }
 
 @media (max-width: 768px) {
+  .logo-img {
+    height: 38px;
+  }
+
   .nav-toggle {
     display: flex;
   }
