@@ -1,15 +1,15 @@
-# ATB Agency — Portfolio Sayti
+# ATB Agency — Portfolio Website
 
-ATB Agency AI xizmatlari uchun rasmiy portfolio veb-sayti.
+Official portfolio website for ATB Agency AI services.
 
-## Xizmatlar
-- Telegram Bot yaratish
-- Web Sayt yaratish
+## Services
+- Telegram Bot Development
+- Website Development
 - Google Maps & Local SEO
 
-## Live sayt
+## Live site
 https://ataboevmirjalol7-web.github.io/ATB-Agency-/
 
-## Aloqa
+## Contact
 - Email: ataboevmirjalol3@gmail.com
 - Telegram: [@atbagencybot](https://t.me/atbagencybot)

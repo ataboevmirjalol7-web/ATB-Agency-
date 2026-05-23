@@ -9,7 +9,7 @@ function setMenuOpen(isOpen) {
   navOverlay.classList.toggle('active', isOpen);
   document.body.classList.toggle('menu-open', isOpen);
   navToggle.setAttribute('aria-expanded', String(isOpen));
-  navToggle.setAttribute('aria-label', isOpen ? 'Menyuni yopish' : 'Menyuni ochish');
+  navToggle.setAttribute('aria-label', isOpen ? 'Close menu' : 'Open menu');
 }
 
 window.addEventListener('scroll', () => {
