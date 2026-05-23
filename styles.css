@@ -81,9 +81,9 @@ ul {
 }
 
 .logo-icon {
-  width: 58px;
-  height: 58px;
-  min-width: 58px;
+  width: 64px;
+  height: 64px;
+  min-width: 64px;
   object-fit: contain;
   display: block;
 }
@@ -672,9 +672,9 @@ a.contact-card:hover {
 
 @media (max-width: 768px) {
   .logo-icon {
-    width: 46px;
-    height: 46px;
-    min-width: 46px;
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
   }
 
   .logo-name {
