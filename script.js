@@ -1,19 +1,39 @@
 const header = document.getElementById('header');
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
+const navOverlay = document.getElementById('navOverlay');
+
+function setMenuOpen(isOpen) {
+  navLinks.classList.toggle('open', isOpen);
+  navToggle.classList.toggle('active', isOpen);
+  navOverlay.classList.toggle('active', isOpen);
+  document.body.classList.toggle('menu-open', isOpen);
+  navToggle.setAttribute('aria-expanded', String(isOpen));
+  navToggle.setAttribute('aria-label', isOpen ? 'Menyuni yopish' : 'Menyuni ochish');
+}
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 40);
 });
 
 navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  setMenuOpen(!navLinks.classList.contains('open'));
+});
+
+navOverlay.addEventListener('click', () => {
+  setMenuOpen(false);
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
+    setMenuOpen(false);
   });
+});
+
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 768) {
+    setMenuOpen(false);
+  }
 });
 
 const observer = new IntersectionObserver(
