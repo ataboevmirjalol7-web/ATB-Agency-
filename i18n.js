@@ -207,16 +207,17 @@ function applyLanguage(lang) {
   window.currentLang = lang;
 }
 
-function initLanguage() {
+function initLanguage(bindEvents = true) {
   const saved = localStorage.getItem('atb-lang');
   const browserLang = navigator.language?.startsWith('uz') ? 'uz' : 'en';
   applyLanguage(saved || browserLang);
 
+  if (!bindEvents) return;
+
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (btn.dataset.lang !== window.currentLang) {
-        applyLanguage(btn.dataset.lang);
-      }
+    btn.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (btn.dataset.lang) applyLanguage(btn.dataset.lang);
     });
   });
 }
