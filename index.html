@@ -25,24 +25,24 @@
           <span class="logo-tagline" data-i18n="logo.tagline">Integration • Innovation • Growth</span>
         </div>
       </a>
-      <div class="nav-right">
-        <div class="lang-switch" id="langSwitch">
-          <button type="button" class="lang-btn" data-lang="uz" aria-label="O'zbek tili">UZ</button>
-          <button type="button" class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#services" data-i18n="nav.services">Services</a></li>
+        <li><a href="#about" data-i18n="nav.about">About</a></li>
+        <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+        <li><a href="#contact" class="btn btn-sm" data-i18n="nav.cta">Get in Touch</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="lang-switch" id="langSwitch" role="group" aria-label="Language">
+          <button type="button" class="lang-btn" data-lang="uz" aria-pressed="false">UZ</button>
+          <button type="button" class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
         </div>
         <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
           <span></span>
           <span></span>
           <span></span>
         </button>
-        <div class="nav-overlay" id="navOverlay"></div>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#services" data-i18n="nav.services">Services</a></li>
-          <li><a href="#about" data-i18n="nav.about">About</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
-          <li><a href="#contact" class="btn btn-sm" data-i18n="nav.cta">Get in Touch</a></li>
-        </ul>
       </div>
+      <div class="nav-overlay" id="navOverlay"></div>
     </nav>
   </header>
 

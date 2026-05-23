@@ -77,39 +77,40 @@ ul {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 24px;
 }
 
-.nav-right {
+.nav-actions {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  flex-shrink: 0;
 }
 
 .lang-switch {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 4px;
   padding: 4px;
-  background: var(--black-card);
-  border: 1px solid var(--border);
-  border-radius: 100px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
 }
 
 .lang-btn {
-  min-width: 40px;
-  min-height: 32px;
-  padding: 6px 12px;
+  min-width: 44px;
+  min-height: 34px;
+  padding: 7px 14px;
   border: none;
-  border-radius: 100px;
+  border-radius: 8px;
   background: transparent;
   color: var(--gray);
   font-family: inherit;
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
   cursor: pointer;
-  transition: var(--transition);
+  transition: color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
   -webkit-tap-highlight-color: transparent;
 }
 
@@ -120,6 +121,12 @@ ul {
 .lang-btn.active {
   background: var(--blue);
   color: white;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.35);
+}
+
+.lang-btn:focus-visible {
+  outline: 2px solid var(--blue-light);
+  outline-offset: 2px;
 }
 
 .logo {
@@ -180,7 +187,8 @@ ul {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 28px;
+  margin-left: auto;
 }
 
 .nav-links a {
@@ -771,15 +779,28 @@ a.contact-card:hover {
     padding: 0 20px;
   }
 
-  .nav-right {
+  .nav {
+    gap: 12px;
+  }
+
+  .nav-links {
+    margin-left: 0;
+  }
+
+  .nav-actions {
     gap: 8px;
   }
 
+  .lang-switch {
+    padding: 3px;
+    border-radius: 9px;
+  }
+
   .lang-btn {
-    min-width: 36px;
-    min-height: 30px;
-    padding: 5px 10px;
-    font-size: 0.75rem;
+    min-width: 40px;
+    min-height: 32px;
+    padding: 6px 11px;
+    font-size: 0.72rem;
   }
 
   .header {
@@ -790,7 +811,7 @@ a.contact-card:hover {
 
   .logo {
     gap: 10px;
-    max-width: calc(100% - 52px);
+    max-width: calc(100% - 120px);
   }
 
   .logo-icon {

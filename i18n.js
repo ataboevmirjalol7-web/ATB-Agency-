@@ -192,8 +192,16 @@ function applyLanguage(lang) {
   });
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.lang === lang);
+    const isActive = btn.dataset.lang === lang;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-pressed', String(isActive));
   });
+
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.setAttribute('aria-label', getMenuLabel(navLinks.classList.contains('open')));
+  }
 
   localStorage.setItem('atb-lang', lang);
   window.currentLang = lang;
@@ -202,11 +210,14 @@ function applyLanguage(lang) {
 function initLanguage() {
   const saved = localStorage.getItem('atb-lang');
   const browserLang = navigator.language?.startsWith('uz') ? 'uz' : 'en';
-  const lang = saved || browserLang;
-  applyLanguage(lang);
+  applyLanguage(saved || browserLang);
 
   document.querySelectorAll('.lang-btn').forEach(btn => {
-    btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+    btn.addEventListener('click', () => {
+      if (btn.dataset.lang !== window.currentLang) {
+        applyLanguage(btn.dataset.lang);
+      }
+    });
   });
 }
 
