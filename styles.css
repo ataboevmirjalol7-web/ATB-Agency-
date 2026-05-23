@@ -81,11 +81,12 @@ ul {
 }
 
 .logo-icon {
-  width: 64px;
-  height: 64px;
-  min-width: 64px;
+  width: 72px;
+  height: 72px;
+  min-width: 72px;
   object-fit: contain;
   display: block;
+  filter: drop-shadow(0 2px 6px rgba(255, 255, 255, 0.15));
 }
 
 .logo-copy {
@@ -672,9 +673,9 @@ a.contact-card:hover {
 
 @media (max-width: 768px) {
   .logo-icon {
-    width: 52px;
-    height: 52px;
-    min-width: 52px;
+    width: 58px;
+    height: 58px;
+    min-width: 58px;
   }
 
   .logo-name {
